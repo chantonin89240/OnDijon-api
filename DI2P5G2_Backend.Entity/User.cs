@@ -2,12 +2,11 @@
 {
     public class User 
     {
-        public int Id { get; set; }
-        public string Nom { get; set; }
-        public int Age { get; set; }
-        public string Adresse { get; set; }
-        public DateTime DateDeNaissance { get; set; }
-        public string Email { get; set; }
+        public int? Id { get; set; }
+        public string? Nom { get; set; }
+        public string? Prenom { get; set; }
+        public DateTime? DateDeNaissance { get; set; }
+        public string? Mail { get; set; }
 
         public User()
         {
@@ -19,14 +18,13 @@
             Id = idProfil;
         }
 
-        public User(int idUser, string nom,DateTime dateDeNaissance, string email, string adresse, int age)
+        public User(int idUser, string nom, string prenom, DateTime dateDeNaissance, string email)
         {
             this.Id = idUser;
             this.Nom = nom;
+            this.Prenom = prenom;
             this.DateDeNaissance = dateDeNaissance;
-            this.Email = email;
-            this.Adresse = adresse;
-            this.Age = age;
+            this.Mail = email;
 
         }
 
