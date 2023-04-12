@@ -9,33 +9,10 @@ namespace DI2P5G2_Backend.Repository.interfaces
 {
     public interface IProfilRepository
     {
-        /// <summary>
-        /// Ajoute un nouveau user.
-        /// </summary>
-        /// <param name="user"></param>
-        void Add(Profil user);
-
-        /// <summary>
-        /// Supprime un user.
-        /// </summary>
-        /// <param name="user"></param>
-        void Delete(Profil user);
-
-        /// <summary>
-        /// Retourne le user demandé.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        Profil Find(int id);
-
-        // Retourne tous les users.
-        IEnumerable<Profil> FindAll();
-
-        /// <summary>
-        /// Met à jour un artiste.
-        /// </summary>
-        /// <param name="artiste"></param>
-        void Update(Profil user);
-
+        Profil GetById(int id);
+        IEnumerable<Profil> GetAll();
+        void Add(Profil profil);
+        void Update(Profil profil);
+        void Delete(Profil profil);
     }
 }

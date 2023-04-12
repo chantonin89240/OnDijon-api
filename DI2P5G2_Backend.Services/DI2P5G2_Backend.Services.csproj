@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DI2P5G2_Backend.Entity\DI2P5G2_Backend.Entity.csproj" />
+    <ProjectReference Include="..\DI2P5G2_Backend.Repository\DI2P5G2_Backend.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

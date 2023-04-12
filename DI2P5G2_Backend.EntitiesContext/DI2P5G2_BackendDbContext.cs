@@ -11,7 +11,7 @@ namespace DI2P5G2_Backend.EntitiesContext
 {
     public class DI2P5G2_BackendDbContext : DbContext
     {
-        public DbSet<Profil> User { get; set; }
+        public DbSet<Profil> Profils { get; set; }
 
         protected readonly IConfiguration? Configuration;
 
@@ -24,6 +24,7 @@ namespace DI2P5G2_Backend.EntitiesContext
         {
 
         }
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             string connectionString = "";

@@ -1,48 +1,42 @@
 ﻿using DI2P5G2_Backend.EntitiesContext;
 using DI2P5G2_Backend.Entity;
 using DI2P5G2_Backend.Repository.interfaces;
+using Microsoft.EntityFrameworkCore;
 
-namespace DI2P5G2_Backend.Repository
+public class ProfilRepository : IProfilRepository
 {
-    public class DbProfilRepository : IProfilRepository
+    private readonly DI2P5G2_BackendDbContext _context;
+
+    public ProfilRepository(DI2P5G2_BackendDbContext context)
     {
-        private DI2P5G2_BackendDbContext context;
-        public DbProfilRepository(DI2P5G2_BackendDbContext dbContext)
-        {
-            context = dbContext;
-        }
+        _context = context;
+    }
 
-        public void Add(Profil user)
-        {
-            context.User.Add(user);
-            context.SaveChanges();
-        }
+    public Profil GetById(int id)
+    {
+        return _context.Profils.Find(id);
+    }
 
-        public void Delete(Profil user)
-        {
-            context.User.Remove(user);
-            context.SaveChanges();
-        }
+    public IEnumerable<Profil> GetAll()
+    {
+        return _context.Profils.ToList();
+    }
 
-        public Profil Find(int id)
-        {
-            var user = context.User.FirstOrDefault(user => user.Id == id);
+    public void Add(Profil profil)
+    {
+        _context.Profils.Add(profil);
+        _context.SaveChanges();
+    }
 
-            return user;
-        }
+    public void Update(Profil profil)
+    {
+        _context.Entry(profil).State = EntityState.Modified;
+        _context.SaveChanges();
+    }
 
-        public IEnumerable<Profil> FindAll()
-        {
-            var users = context.User.ToList();
-
-            return users;
-        }
-
-        public void Update(Profil user)
-        {
-            context.Update(user);
-            context.SaveChanges();
-        }
-
+    public void Delete(Profil profil)
+    {
+        _context.Profils.Remove(profil);
+        _context.SaveChanges();
     }
 }
