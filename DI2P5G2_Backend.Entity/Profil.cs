@@ -20,9 +20,9 @@
             Id = idProfil;
         }
 
-        public Profil(int idUser, string nom, string prenom, DateTime dateDeNaissance, string email)
+        public Profil(int idProfil, string nom, string prenom, DateTime dateDeNaissance, string email)
         {
-            this.Id = idUser;
+            this.Id = idProfil;
             this.Nom = nom;
             this.Prenom = prenom;
             this.DateDeNaissance = dateDeNaissance;
