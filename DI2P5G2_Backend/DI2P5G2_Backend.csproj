@@ -14,4 +14,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DI2P5G2_Backend.EntitiesContext\DI2P5G2_Backend.EntitiesContext.csproj" />
+  </ItemGroup>
+
 </Project>

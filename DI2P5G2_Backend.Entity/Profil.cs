@@ -1,24 +1,26 @@
 ﻿namespace DI2P5G2_Backend.Entity
 {
-    public class User 
+    public class Profil 
     {
         public int? Id { get; set; }
         public string? Nom { get; set; }
         public string? Prenom { get; set; }
         public DateTime? DateDeNaissance { get; set; }
         public string? Mail { get; set; }
+        public string? Mdp { get; set; }
+        public string? Hash { get; set; }
 
-        public User()
+        public Profil()
         {
 
         }
 
-        public User(int idProfil)
+        public Profil(int idProfil)
         {
             Id = idProfil;
         }
 
-        public User(int idUser, string nom, string prenom, DateTime dateDeNaissance, string email)
+        public Profil(int idUser, string nom, string prenom, DateTime dateDeNaissance, string email)
         {
             this.Id = idUser;
             this.Nom = nom;
