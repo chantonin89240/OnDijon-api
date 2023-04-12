@@ -4,41 +4,41 @@ using DI2P5G2_Backend.Repository.interfaces;
 
 namespace DI2P5G2_Backend.Repository
 {
-    public class DbUserRepository : IUserRepository
+    public class DbProfilRepository : IProfilRepository
     {
         private DI2P5G2_BackendDbContext context;
-        public DbUserRepository(DI2P5G2_BackendDbContext dbContext)
+        public DbProfilRepository(DI2P5G2_BackendDbContext dbContext)
         {
             context = dbContext;
         }
 
-        public void Add(User user)
+        public void Add(Profil user)
         {
             context.User.Add(user);
             context.SaveChanges();
         }
 
-        public void Delete(User user)
+        public void Delete(Profil user)
         {
             context.User.Remove(user);
             context.SaveChanges();
         }
 
-        public User Find(int id)
+        public Profil Find(int id)
         {
             var user = context.User.FirstOrDefault(user => user.Id == id);
 
             return user;
         }
 
-        public IEnumerable<User> FindAll()
+        public IEnumerable<Profil> FindAll()
         {
             var users = context.User.ToList();
 
             return users;
         }
 
-        public void Update(User user)
+        public void Update(Profil user)
         {
             context.Update(user);
             context.SaveChanges();

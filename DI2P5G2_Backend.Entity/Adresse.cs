@@ -7,21 +7,19 @@
         public string? Ville { get; set; }
         public int? CodePostal { get; set; }
         public string? Pays { get; set; }
-        public bool? Favori { get; set; }
 
         public Adresse()
         {
 
         }
 
-        public Adresse(string rue, string ville, string pays, int cp, int idUser, bool favori)
+        public Adresse(string rue, string ville, string pays, int cp, int idUser)
         {
             this.Id = idUser;
             this.Rue = rue;
             this.Ville = ville;
-            this.Pays= pays;
+            this.Pays = pays;
             this.CodePostal = cp;
-            this.Favori = favori;
 
         }
 
