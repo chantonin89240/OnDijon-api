@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DI2P5G2_Backend.EntitiesContext\DI2P5G2_Backend.EntitiesContext.csproj" />
+    <ProjectReference Include="..\DI2P5G2_Backend.Entity\DI2P5G2_Backend.Entity.csproj" />
+  </ItemGroup>
+
+</Project>
