@@ -22,7 +22,7 @@ namespace DI2P5G2_Backend.EntitiesContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Profil>().HasKey(x => x.Id);
+            //modelBuilder.Entity<Profil>().HasKey(x => x.Id);
         }
 
     }
