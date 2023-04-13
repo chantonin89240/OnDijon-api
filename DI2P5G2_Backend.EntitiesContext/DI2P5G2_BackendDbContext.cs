@@ -12,24 +12,12 @@ namespace DI2P5G2_Backend.EntitiesContext
     public class DI2P5G2_BackendDbContext : DbContext
     {
         public DbSet<Profil> Profils { get; set; }
-
-        protected readonly IConfiguration? Configuration;
-
-        public DI2P5G2_BackendDbContext(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        public DbSet<Adresse> Adresses { get; set; }
+        public DbSet<L_ProfilAdresse> LinkedAdresses{ get; set; }
 
         public DI2P5G2_BackendDbContext(DbContextOptions<DI2P5G2_BackendDbContext> options) : base(options)
         {
 
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            string connectionString = "";
-            // connect to sql server with connection string from app settings
-            options.UseSqlServer(connectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

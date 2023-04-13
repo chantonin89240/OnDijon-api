@@ -14,7 +14,7 @@ public class ProfilRepository : IProfilRepository
 
     public Profil GetById(int id)
     {
-        return _context.Profils.Find(id);
+        return _context.Profils.FirstOrDefault(profil => profil.Id == id);
     }
 
     public IEnumerable<Profil> GetAll()
