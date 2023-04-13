@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI2P5G2_Backend.Entity", "DI2P5G2_Backend.Entity\DI2P5G2_Backend.Entity.csproj", "{ED352C77-CBE6-478B-B744-D1493DAE5765}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DI2P5G2_Backend.Entity", "DI2P5G2_Backend.Entity\DI2P5G2_Backend.Entity.csproj", "{ED352C77-CBE6-478B-B744-D1493DAE5765}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI2P5G2_Backend.Repository", "DI2P5G2_Backend.Repository\DI2P5G2_Backend.Repository.csproj", "{7CF9B6E0-4D43-43BF-BD36-03F108F09574}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DI2P5G2_Backend.Repository", "DI2P5G2_Backend.Repository\DI2P5G2_Backend.Repository.csproj", "{7CF9B6E0-4D43-43BF-BD36-03F108F09574}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI2P5G2_Backend.Services", "DI2P5G2_Backend.Services\DI2P5G2_Backend.Services.csproj", "{42F2FBE2-081F-4AEF-946E-5E15A981EA6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DI2P5G2_Backend.Services", "DI2P5G2_Backend.Services\DI2P5G2_Backend.Services.csproj", "{42F2FBE2-081F-4AEF-946E-5E15A981EA6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI2P5G2_Backend.EntitiesContext", "DI2P5G2_Backend.EntitiesContext\DI2P5G2_Backend.EntitiesContext.csproj", "{DA283D6E-9570-4680-BF10-4BDCCD3BDC15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DI2P5G2_Backend.EntitiesContext", "DI2P5G2_Backend.EntitiesContext\DI2P5G2_Backend.EntitiesContext.csproj", "{DA283D6E-9570-4680-BF10-4BDCCD3BDC15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI2P5G2_Backend", "DI2P5G2_Backend\DI2P5G2_Backend.csproj", "{9FCEC993-BEC9-4B60-880D-8D8130E1F8BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI2P5G2_Front_Bo", "DI2P5G2_Front_Bo\DI2P5G2_Front_Bo.csproj", "{D2720413-7B33-49CF-933D-C6D109518C88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{DA283D6E-9570-4680-BF10-4BDCCD3BDC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA283D6E-9570-4680-BF10-4BDCCD3BDC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA283D6E-9570-4680-BF10-4BDCCD3BDC15}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9FCEC993-BEC9-4B60-880D-8D8130E1F8BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9FCEC993-BEC9-4B60-880D-8D8130E1F8BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9FCEC993-BEC9-4B60-880D-8D8130E1F8BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9FCEC993-BEC9-4B60-880D-8D8130E1F8BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2720413-7B33-49CF-933D-C6D109518C88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2720413-7B33-49CF-933D-C6D109518C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2720413-7B33-49CF-933D-C6D109518C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2720413-7B33-49CF-933D-C6D109518C88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
