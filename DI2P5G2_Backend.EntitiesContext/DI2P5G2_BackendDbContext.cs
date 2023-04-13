@@ -29,7 +29,7 @@ namespace DI2P5G2_Backend.EntitiesContext
         {
             string connectionString = "";
             // connect to sql server with connection string from app settings
-            options.UseSqlServer(Configuration?.GetConnectionString(connectionString));
+            options.UseSqlServer(connectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
