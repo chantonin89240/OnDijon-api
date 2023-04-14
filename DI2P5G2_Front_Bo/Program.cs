@@ -8,10 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<DI2P5G2_BackendDbContext>(
-                options => options.UseSqlServer(builder.Configuration.GetConnectionString("WebApiDatabase"))
-            );
+              options => options.UseSqlServer(builder.Configuration.GetConnectionString("WebApiDatabase"))
+        );
 
 builder.Services.AddScoped<IProfilRepository, ProfilRepository>();
+
 
 var app = builder.Build();
 
@@ -27,18 +28,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
 app.UseAuthorization();
-
-app.UseEndpoints(endpoints =>
-{
-//endpoints.MapControllerRoute(
-    //name: "createProfil",
-    //pattern: "/administration/artiste/create",
-    //defaults: new { controller = "Artists", action = "Create" });
-});
-
-app.Run();
-
 
 app.MapRazorPages();
 
