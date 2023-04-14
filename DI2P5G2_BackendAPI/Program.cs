@@ -13,7 +13,8 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddDbContext<DI2P5G2_BackendDbContext>(
-              options => options.UseSqlServer(builder.Configuration.GetConnectionString("WebApiDatabase"))
+              options => options.UseSqlServer(builder.Configuration.GetConnectionString("localDb"))
+              //options => options.UseSqlServer(builder.Configuration.GetConnectionString("azureDb"))
         );
 
 builder.Services.AddScoped<IProfilRepository, ProfilRepository>();

@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ProfilController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.16">
       <PrivateAssets>all</PrivateAssets>
@@ -19,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DI2P5G2_Backend.EntitiesContext\DI2P5G2_Backend.EntitiesContext.csproj" />
     <ProjectReference Include="..\DI2P5G2_Backend.Repository\DI2P5G2_Backend.Repository.csproj" />
+    <ProjectReference Include="..\DI2P5G2_Backend.Services\DI2P5G2_Backend.Services.csproj" />
   </ItemGroup>
 
 </Project>
