@@ -24,19 +24,19 @@ namespace DI2P5G2_Backend.EntitiesContext.Migrations
 
             modelBuilder.Entity("DI2P5G2_Backend.Entity.L_ProfilAdresse", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
 
-                    b.Property<int>("AdresseId")
+                    b.Property<int?>("AdresseId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Favori")
+                    b.Property<bool?>("Favori")
                         .HasColumnType("bit");
 
-                    b.Property<int>("ProfilId")
+                    b.Property<int?>("ProfilId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

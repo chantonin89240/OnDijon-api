@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DI2P5G2_Backend.EntitiesContext.Migrations
 {
     [DbContext(typeof(DI2P5G2_BackendDbContext))]
-    [Migration("20230414142520_init")]
+    [Migration("20230504120947_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,19 +26,19 @@ namespace DI2P5G2_Backend.EntitiesContext.Migrations
 
             modelBuilder.Entity("DI2P5G2_Backend.Entity.L_ProfilAdresse", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
 
-                    b.Property<int>("AdresseId")
+                    b.Property<int?>("AdresseId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Favori")
+                    b.Property<bool?>("Favori")
                         .HasColumnType("bit");
 
-                    b.Property<int>("ProfilId")
+                    b.Property<int?>("ProfilId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

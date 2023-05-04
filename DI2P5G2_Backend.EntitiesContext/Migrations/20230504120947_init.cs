@@ -33,9 +33,9 @@ namespace DI2P5G2_Backend.EntitiesContext.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ProfilId = table.Column<int>(type: "int", nullable: false),
-                    AdresseId = table.Column<int>(type: "int", nullable: false),
-                    Favori = table.Column<bool>(type: "bit", nullable: false)
+                    ProfilId = table.Column<int>(type: "int", nullable: true),
+                    AdresseId = table.Column<int>(type: "int", nullable: true),
+                    Favori = table.Column<bool>(type: "bit", nullable: true)
                 },
                 constraints: table =>
                 {
