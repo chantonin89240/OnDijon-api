@@ -2,13 +2,13 @@
 {
     public class Profil 
     {
-        public int? Id { get; set; }
-        public string? Nom { get; set; }
-        public string? Prenom { get; set; }
-        public DateTime? DateDeNaissance { get; set; }
-        public string? Mail { get; set; }
-        public string? Mdp { get; set; }
-        public string? Hash { get; set; }
+        public int Id { get; set; }
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
+        public DateTime DateDeNaissance { get; set; }
+        public string Mail { get; set; }
+        public string MDP { get; set; }
+        public string Hash { get; set; }
 
         public Profil()
         {

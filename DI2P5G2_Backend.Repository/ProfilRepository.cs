@@ -14,17 +14,17 @@ public class ProfilRepository : IProfilRepository
 
     public Profil GetById(int id)
     {
-        return _context.Profils.FirstOrDefault(profil => profil.Id == id);
+        return _context.Profil.FirstOrDefault(profil => profil.Id == id);
     }
 
     public IEnumerable<Profil> GetAll()
     {
-        return _context.Profils.ToList();
+        return _context.Profil.ToList();
     }
 
     public void Add(Profil profil)
     {
-        _context.Profils.Add(profil);
+        _context.Profil.Add(profil);
         _context.SaveChanges();
     }
 
@@ -36,7 +36,7 @@ public class ProfilRepository : IProfilRepository
 
     public void Delete(Profil profil)
     {
-        _context.Profils.Remove(profil);
+        _context.Profil.Remove(profil);
         _context.SaveChanges();
     }
 }

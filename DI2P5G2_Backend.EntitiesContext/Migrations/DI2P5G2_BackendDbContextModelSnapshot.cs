@@ -22,82 +22,62 @@ namespace DI2P5G2_Backend.EntitiesContext.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("DI2P5G2_Backend.Entity.Adresse", b =>
-                {
-                    b.Property<int?>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
-
-                    b.Property<int?>("CodePostal")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Pays")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Rue")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Ville")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Adresses");
-                });
-
             modelBuilder.Entity("DI2P5G2_Backend.Entity.L_ProfilAdresse", b =>
                 {
-                    b.Property<int?>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<bool?>("Favori")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("IdAdresse")
+                    b.Property<int>("AdresseId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("IdProfil")
+                    b.Property<bool>("Favori")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProfilId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("LinkedAdresses");
+                    b.ToTable("ProfilAdresse");
                 });
 
             modelBuilder.Entity("DI2P5G2_Backend.Entity.Profil", b =>
                 {
-                    b.Property<int?>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime?>("DateDeNaissance")
+                    b.Property<DateTime>("DateDeNaissance")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Hash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MDP")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Mail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Mdp")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nom")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Prenom")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Profils");
+                    b.ToTable("Profil");
                 });
 #pragma warning restore 612, 618
         }
