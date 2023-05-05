@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace DI2P5G2_Backend.Repository.interfaces
 {
-    public interface IProfilAdresseRepository
+    public interface IFavorisRepository
     {
-        IEnumerable<L_ProfilAdresse> GetAllByProfilId(int id);
-        void Add(L_ProfilAdresse profilAdresse);
-        void Delete(L_ProfilAdresse profilAdresse);
+        IEnumerable<Favoris> GetAllByProfilId(int id);
+        void Add(Favoris favoris);
+        void Delete(Favoris favoris);
     }
 }

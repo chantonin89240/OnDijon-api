@@ -19,7 +19,9 @@ builder.Services.AddDbContext<DI2P5G2_BackendDbContext>(
         );
 
 builder.Services.AddScoped<IProfilRepository, ProfilRepository>();
-builder.Services.AddScoped<IProfilAdresseRepository, ProfilAdresseRepository>();
+builder.Services.AddScoped<IFavorisRepository, FavorisRepository>();
+builder.Services.AddScoped<IShelterStateRepository, ShelterStateRepository>();
+builder.Services.AddScoped<ISensorErrorRepository, SensorErrorRepository>();
 
 
 //var context = builder.Services.BuildServiceProvider().GetRequiredService<DI2P5G2_BackendDbContext>();

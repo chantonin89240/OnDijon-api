@@ -2,13 +2,10 @@
 {
     public class Profil 
     {
-        public int Id { get; set; }
-        public string Nom { get; set; }
-        public string Prenom { get; set; }
-        public DateTime DateDeNaissance { get; set; }
-        public string Mail { get; set; }
-        public string MDP { get; set; }
-        public string Hash { get; set; }
+        public int? Id { get; set; }
+        public string? Nom { get; set; }
+        public string? Prenom { get; set; }
+        public Guid? Guid { get; set; }
 
         public Profil()
         {
@@ -20,13 +17,12 @@
             Id = idProfil;
         }
 
-        public Profil(int idProfil, string nom, string prenom, DateTime dateDeNaissance, string email)
+        public Profil(int idProfil, string nom, string prenom, Guid guid)
         {
             this.Id = idProfil;
             this.Nom = nom;
             this.Prenom = prenom;
-            this.DateDeNaissance = dateDeNaissance;
-            this.Mail = email;
+            this.Guid = guid;
 
         }
 
