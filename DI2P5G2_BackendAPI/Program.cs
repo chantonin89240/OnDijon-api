@@ -1,5 +1,8 @@
 using DI2P5G2_Backend.EntitiesContext;
-using DI2P5G2_Backend.Repository.interfaces;
+using DI2P5G2_Backend.Repository;
+using DI2P5G2_Backend.Repository.Interfaces;
+using DI2P5G2_Backend.Services;
+using DI2P5G2_Backend.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +21,9 @@ builder.Services.AddDbContext<DI2P5G2_BackendDbContext>(
         );
 
 builder.Services.AddScoped<IProfilRepository, ProfilRepository>();
+
+builder.Services.AddScoped<IAbriRepository, AbriRepository>();
+builder.Services.AddScoped<IAbriService, AbriService>();
 
 var app = builder.Build();
 

@@ -7,17 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="interfaces\IProfilService.cs" />
+    <Compile Remove="Interfaces\IProfilService.cs" />
     <Compile Remove="ProfilService.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DI2P5G2_Backend.Entity\DI2P5G2_Backend.Entity.csproj" />
     <ProjectReference Include="..\DI2P5G2_Backend.Repository\DI2P5G2_Backend.Repository.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="interfaces\" />
   </ItemGroup>
 
 </Project>
