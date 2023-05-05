@@ -1,5 +1,6 @@
 using DI2P5G2_Backend.EntitiesContext;
 using DI2P5G2_Backend.Repository;
+using DI2P5G2_Backend.Repository.interfaces;
 using DI2P5G2_Backend.Repository.Interfaces;
 using DI2P5G2_Backend.Services;
 using DI2P5G2_Backend.Services.Interfaces;
