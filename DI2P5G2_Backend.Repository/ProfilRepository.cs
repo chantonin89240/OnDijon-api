@@ -1,6 +1,6 @@
 ﻿using DI2P5G2_Backend.EntitiesContext;
 using DI2P5G2_Backend.Entity;
-using DI2P5G2_Backend.Repository.interfaces;
+using DI2P5G2_Backend.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 public class ProfilRepository : IProfilRepository

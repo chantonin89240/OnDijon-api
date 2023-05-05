@@ -1,6 +1,9 @@
 using DI2P5G2_Backend.EntitiesContext;
 using DI2P5G2_Backend.Repository;
-using DI2P5G2_Backend.Repository.interfaces;
+using DI2P5G2_Backend.Repository.Interfaces;
+using DI2P5G2_Backend.Services;
+using DI2P5G2_Backend.Services.Interfaces;
+
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,11 +25,14 @@ builder.Services.AddScoped<IProfilRepository, ProfilRepository>();
 builder.Services.AddScoped<IFavorisRepository, FavorisRepository>();
 builder.Services.AddScoped<IShelterStateRepository, ShelterStateRepository>();
 builder.Services.AddScoped<ISensorErrorRepository, SensorErrorRepository>();
-
+builder.Services.AddScoped<IAbriRepository, AbriRepository>();
+builder.Services.AddScoped<IAbriService, AbriService>();
 
 //var context = builder.Services.BuildServiceProvider().GetRequiredService<DI2P5G2_BackendDbContext>();
 //context.Database.EnsureDeleted();
 //context.Database.EnsureCreated();
+
+
 
 
 var app = builder.Build();

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DI2P5G2_Backend.Repository.interfaces
+namespace DI2P5G2_Backend.Repository.Interfaces
 {
     public interface IProfilRepository
     {
