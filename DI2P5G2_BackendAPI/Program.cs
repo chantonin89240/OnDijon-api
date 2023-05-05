@@ -1,4 +1,5 @@
 using DI2P5G2_Backend.EntitiesContext;
+using DI2P5G2_Backend.Repository;
 using DI2P5G2_Backend.Repository.interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,15 @@ builder.Services.AddDbContext<DI2P5G2_BackendDbContext>(
         );
 
 builder.Services.AddScoped<IProfilRepository, ProfilRepository>();
+builder.Services.AddScoped<IFavorisRepository, FavorisRepository>();
+builder.Services.AddScoped<IShelterStateRepository, ShelterStateRepository>();
+builder.Services.AddScoped<ISensorErrorRepository, SensorErrorRepository>();
+
+
+//var context = builder.Services.BuildServiceProvider().GetRequiredService<DI2P5G2_BackendDbContext>();
+//context.Database.EnsureDeleted();
+//context.Database.EnsureCreated();
+
 
 var app = builder.Build();
 

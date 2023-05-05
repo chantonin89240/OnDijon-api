@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\ProfilAdresseController.cs" />
     <Compile Remove="Controllers\WeatherForecastController.cs" />
     <Compile Remove="ProfilController.cs" />
     <Compile Remove="WeatherForecast.cs" />
