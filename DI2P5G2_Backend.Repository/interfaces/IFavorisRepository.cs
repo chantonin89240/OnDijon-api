@@ -9,8 +9,10 @@ namespace DI2P5G2_Backend.Repository.interfaces
 {
     public interface IFavorisRepository
     {
-        IEnumerable<Favoris> GetAllByProfilId(int id);
+        Favoris FindById(int id);
+        IEnumerable<Favoris> FindByGuid(Guid guid);
         void Add(Favoris favoris);
-        void Delete(Favoris favoris);
+        void Delete(int id);
+        void Update(Favoris favoris);
     }
 }
