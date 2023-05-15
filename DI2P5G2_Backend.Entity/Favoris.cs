@@ -13,6 +13,11 @@ namespace DI2P5G2_Backend.Entity
         public int? ProfilId { get; set; }
         public double? Latitude { get; set; }
         public double? Longitude { get; set; }
+        public int? CodePostal { get; set; }
+        public string? Ville { get; set; }
+        public string? Rue { get; set; }
+        public string? Pays { get; set; }
+
         public Favoris()
         {
 
