@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DI2P5G2_Backend.EntitiesContext.Migrations
 {
     [DbContext(typeof(DI2P5G2_BackendDbContext))]
-    [Migration("20230505152505_init2")]
-    partial class init2
+    [Migration("20230515111152_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -78,8 +78,11 @@ namespace DI2P5G2_Backend.EntitiesContext.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
 
-                    b.Property<int?>("IdAbris")
-                        .HasColumnType("int");
+                    b.Property<DateTime?>("DateTimeRefresh")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("IdAbris")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("IdCapteur")
                         .HasColumnType("int");
@@ -103,11 +106,11 @@ namespace DI2P5G2_Backend.EntitiesContext.Migrations
                     b.Property<int?>("Available")
                         .HasColumnType("int");
 
-                    b.Property<int?>("IdAbris")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("Timestamp")
+                    b.Property<DateTime?>("DateTimeRefresh")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("IdAbris")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
