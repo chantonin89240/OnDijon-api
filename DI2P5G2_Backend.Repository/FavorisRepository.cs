@@ -30,7 +30,7 @@ namespace DI2P5G2_Backend.Repository
         // repository pour récupérer la liste des favoris d'un utilisateur
         public IEnumerable<Favoris> FindByGuid(Guid guid)
         {
-            Profil idProfil = _context.Profil.Find(guid);
+            Profil idProfil = _context.Profil.Where(p => p.Guid == guid).FirstOrDefault();
             return _context.Favoris.ToList().FindAll(fa => fa.ProfilId == idProfil.Id);
 
             //return _context.Favoris.ToList().Join(_context.Profil, fav => fav.ProfilId, pro => pro.Guid, (fav, pro) = fav);

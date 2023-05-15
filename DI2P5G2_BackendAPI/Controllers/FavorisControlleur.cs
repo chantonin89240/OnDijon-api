@@ -16,17 +16,16 @@ namespace DI2P5G2_BackendAPI.Controllers
         }
 
         // GET: récupére la liste des favoris pour un utilisateur 
-        [HttpGet("{guid}")]
+        [HttpGet("byGuid/{guid}")]
         public IEnumerable<Favoris> GetFavorisByGuid(Guid guid)
         {
             return _favorisService.GetFavorisByGuid(guid);
         }
 
-        // GET: récupére un favoris pour un utilisateur 
         [HttpGet("{id}")]
         public Favoris GetFavorisById(int id)
         {
-            return _favorisService.GetFavoris(id);
+            return _favorisService.GetFavorisById(id);
         }
 
         // POST: ajout d'un favoris pour un utilisateur 

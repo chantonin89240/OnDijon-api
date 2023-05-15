@@ -1,5 +1,6 @@
 ﻿using DI2P5G2_Backend.Entity;
 using DI2P5G2_Backend.Repository.interfaces;
+using DI2P5G2_Backend.Repository.Interfaces;
 using DI2P5G2_Backend.Services.Interfaces;
 
 namespace DI2P5G2_Backend.Services
@@ -7,6 +8,11 @@ namespace DI2P5G2_Backend.Services
     public class FavorisService : IFavorisService
     {
         private readonly IFavorisRepository _favorisRepository;
+
+        public FavorisService(IFavorisRepository favorisRepository)
+        {
+            this._favorisRepository = favorisRepository;
+        }
 
         // service pour l'ajout d'u favoris
         public void AddFavoris(Favoris favoris)
@@ -21,7 +27,7 @@ namespace DI2P5G2_Backend.Services
         }
 
         // service pour récupérer les favoris d'un utilisateur
-        public Favoris GetFavoris(int id)
+        public Favoris GetFavorisById(int id)
         {
             return _favorisRepository.FindById(id);
         }

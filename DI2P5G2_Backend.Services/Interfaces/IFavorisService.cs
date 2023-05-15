@@ -9,7 +9,7 @@ namespace DI2P5G2_Backend.Services.Interfaces
 {
     public interface IFavorisService
     {
-        Favoris GetFavoris(int id);
+        Favoris GetFavorisById(int id);
         IEnumerable<Favoris> GetFavorisByGuid(Guid guid);
         void AddFavoris(Favoris favoris);
         void DeleteFavoris(int id);
