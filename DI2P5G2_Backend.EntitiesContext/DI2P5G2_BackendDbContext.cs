@@ -28,6 +28,7 @@ namespace DI2P5G2_Backend.EntitiesContext
             .WithMany()
             .HasForeignKey(f => f.ProfilId)
             .OnDelete(DeleteBehavior.Restrict);
+
         }
 
     }

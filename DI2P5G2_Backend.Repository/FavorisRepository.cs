@@ -24,7 +24,7 @@ namespace DI2P5G2_Backend.Repository
         // repository pour récupérer un favoris
         public Favoris FindById(int id)
         {
-            return _context.Favoris.Find(id);
+            return _context?.Favoris.Find(id);
         }
 
         // repository pour récupérer la liste des favoris d'un utilisateur

@@ -4,6 +4,7 @@ using DI2P5G2_Backend.EntitiesContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DI2P5G2_Backend.EntitiesContext.Migrations
 {
     [DbContext(typeof(DI2P5G2_BackendDbContext))]
-    partial class DI2P5G2_BackendDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230515083311_init3")]
+    partial class init3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -101,11 +103,11 @@ namespace DI2P5G2_Backend.EntitiesContext.Migrations
                     b.Property<int?>("Available")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("DateTimeRefresh")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("IdAbris")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Timestamp")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

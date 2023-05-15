@@ -9,15 +9,17 @@ namespace DI2P5G2_Backend.Entity
     public class ShelterState
     {
         public int? Id { get; set; }
-        public int? IdAbris { get; set; }
-        public DateTime? Timestamp { get; set; }
+        public string? IdAbris { get; set; }
+        public DateTime? DateTimeRefresh { get; set; }
         public int? Available { get; set; }
+
         public ShelterState() { }
-        public ShelterState(int id, int idAbris, DateTime timestamp, int available)
+
+        public ShelterState(int id, string idAbris, DateTime dateTimeRefresh, int available)
         {
             Id = id;
             IdAbris = idAbris;
-            Timestamp = timestamp;
+            DateTimeRefresh = dateTimeRefresh;
             Available = available;
 
         }
