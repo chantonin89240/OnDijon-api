@@ -8,7 +8,7 @@ namespace DI2P5G2_Backend.EntitiesContext.Migrations
     public partial class init2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
-        {
+        {        
             migrationBuilder.CreateTable(
                 name: "Profil",
                 columns: table => new
@@ -79,6 +79,7 @@ namespace DI2P5G2_Backend.EntitiesContext.Migrations
                 name: "IX_Favoris_ProfilId",
                 table: "Favoris",
                 column: "ProfilId");
+
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
