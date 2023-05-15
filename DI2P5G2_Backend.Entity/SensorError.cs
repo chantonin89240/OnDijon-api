@@ -9,11 +9,11 @@ namespace DI2P5G2_Backend.Entity
     public class SensorError
     {
         public int? Id { get; set; }
-        public int? IdAbris { get; set; }
+        public string? IdAbris { get; set; }
         public int? IdCapteur{ get; set; }
         public string? Libelle{ get; set; }
         public SensorError() { }
-        public SensorError(int id, int idAbris, int idCapteur, string libelle)
+        public SensorError(int id, string idAbris, int idCapteur, string libelle)
         {
             Id = id;
             IdAbris = idAbris;
