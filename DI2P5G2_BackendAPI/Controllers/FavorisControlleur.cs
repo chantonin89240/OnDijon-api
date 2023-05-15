@@ -1,6 +1,5 @@
 ﻿using DI2P5G2_Backend.Entity;
-using DI2P5G2_Backend.Repository.interfaces;
-using Microsoft.AspNetCore.Http;
+using DI2P5G2_Backend.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DI2P5G2_BackendAPI.Controllers
@@ -9,32 +8,46 @@ namespace DI2P5G2_BackendAPI.Controllers
     [ApiController]
     public class FavorisController : ControllerBase
     {
-        private readonly IFavorisRepository _favorisRepository;
+        private IFavorisService _favorisService;
 
-        public FavorisController(IFavorisRepository favorisRepository)
+        public FavorisController(IFavorisService favoriService)
         {
-            _favorisRepository = favorisRepository;
+            this._favorisService = favoriService;
         }
 
-        // GET: api/<ProfilController>
-        [HttpGet]
-        public IEnumerable<Favoris> GetAllByProfilId(int id)
+        // GET: récupére la liste des favoris pour un utilisateur 
+        [HttpGet("{guid}")]
+        public IEnumerable<Favoris> GetFavorisByGuid(Guid guid)
         {
-            return _favorisRepository.GetAllByProfilId(id);
+            return _favorisService.GetFavorisByGuid(guid);
         }
 
-        // POST api/<ProfilController>
+        // GET: récupére un favoris pour un utilisateur 
+        [HttpGet("{id}")]
+        public Favoris GetFavorisById(int id)
+        {
+            return _favorisService.GetFavoris(id);
+        }
+
+        // POST: ajout d'un favoris pour un utilisateur 
         [HttpPost]
         public void Post([FromBody] Favoris favoris)
         {
-            _favorisRepository.Add(favoris);
+            _favorisService.AddFavoris(favoris);
         }
 
-        // DELETE api/<ProfilController>/5
+        // DELETE: suppression d'un favoris
         [HttpDelete("{id}")]
-        public void Delete(Favoris favoris)
+        public void Delete(int id)
         {
-            _favorisRepository.Delete(favoris);
+            _favorisService.DeleteFavoris(id);
+        }
+
+        // PUT: modification d'un favoris
+        [HttpPut]
+        public void Update(Favoris favoris)
+        {
+            _favorisService.UpdateFavoris(favoris);
         }
     }
 }
