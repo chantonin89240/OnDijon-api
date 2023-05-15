@@ -13,6 +13,6 @@ namespace DI2P5G2_Backend.Repository.interfaces
         IEnumerable<Favoris> FindByGuid(Guid guid);
         void Add(Favoris favoris);
         void Delete(int id);
-        void Update(Favoris favoris);
+        void Update(Favoris? favoris);
     }
 }
