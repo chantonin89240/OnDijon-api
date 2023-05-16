@@ -1,5 +1,7 @@
 ﻿using DI2P5G2_Backend.Entity;
+using DI2P5G2_Backend.Repository;
 using DI2P5G2_Backend.Repository.interfaces;
+using DI2P5G2_Backend.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -10,46 +12,34 @@ namespace DI2P5G2_BackendAPI.Controllers
     [ApiController]
     public class ShelterStateController : ControllerBase
     {
-        private readonly IShelterStateRepository _shelterStateRepository;
+        private readonly IShelterStateService _shelterStateService;
 
-        public ShelterStateController(IShelterStateRepository shelterStateRepository)
+        public ShelterStateController(IShelterStateService shelterStateService)
         {
-            _shelterStateRepository = shelterStateRepository;
-        }
-
-        // GET: api/<ShelterStateController>
-        [HttpGet]
-        public IEnumerable<ShelterState> Get()
-        {
-            return _shelterStateRepository.GetAll();
+            this._shelterStateService = shelterStateService;
         }
 
         // GET api/<ShelterStateController>/5
         [HttpGet("{id}")]
-        public ShelterState Get(int id)
+        public ShelterState GetLastState(int id)
         {
-            return _shelterStateRepository.GetById(id);
+            return this._shelterStateService.GetLastStateByShelter(id);
         }
 
         // POST api/<ShelterStateController>
         [HttpPost]
+        [Route("State")]
         public void Post([FromBody] ShelterState shelter)
         {
-            _shelterStateRepository.Add(shelter);
+            this._shelterStateService.AddShelterState(shelter);
         }
 
-        // PUT api/<ShelterStateController>/5
-        [HttpPut("{id}")]
-        public void Put([FromBody] ShelterState shelter)
+        // POST api/<ShelterStateController>
+        [HttpPost]
+        [Route("Stat")]
+        public int GetStatUser([FromBody] ShelterStatistique shelter)
         {
-            _shelterStateRepository.Update(shelter);
-        }
-
-        // DELETE api/<ShelterStateController>/5
-        [HttpDelete("{id}")]
-        public void Delete(ShelterState shelter)
-        {
-            _shelterStateRepository.Delete(shelter);
+            return this._shelterStateService.GetStatUserOnShelter(shelter.Id, shelter.DateStart, shelter.DateEnd);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace DI2P5G2_Backend.EntitiesContext
                         @EndDatetime datetime
                     AS 
                     BEGIN 
-                        select count(*) from [dbo].[ShelterState]
+                        select count(*) as CountUserByShelter from [dbo].[ShelterState]
                         where [ShelterState].[IdAbris] = @IdShelter 
                         and [ShelterState].[DateTimeRefresh] >= @StartDatetime
                         and [ShelterState].[DateTimeRefresh] <= @EndDatetime

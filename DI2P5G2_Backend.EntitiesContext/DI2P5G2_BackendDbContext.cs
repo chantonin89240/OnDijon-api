@@ -16,6 +16,8 @@ namespace DI2P5G2_Backend.EntitiesContext
         public DbSet<ShelterState>? ShelterState{ get; set; }
         public DbSet<SensorError>? SensorError{ get; set; }
 
+        public StoredStat StoredStat { get; set; }
+
         public DI2P5G2_BackendDbContext(DbContextOptions<DI2P5G2_BackendDbContext> options) : base(options)
         {
 
