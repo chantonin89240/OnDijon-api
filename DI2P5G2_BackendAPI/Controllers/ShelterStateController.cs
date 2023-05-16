@@ -37,7 +37,7 @@ namespace DI2P5G2_BackendAPI.Controllers
         // POST api/<ShelterStateController>
         [HttpPost]
         [Route("Stat")]
-        public int GetStatUser([FromBody] ShelterStatistique shelter)
+        public int GetStatUser([FromBody] ShelterStatistic shelter)
         {
             return this._shelterStateService.GetStatUserOnShelter(shelter.Id, shelter.DateStart, shelter.DateEnd);
         }
