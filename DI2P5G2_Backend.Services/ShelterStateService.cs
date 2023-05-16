@@ -34,5 +34,9 @@ namespace DI2P5G2_Backend.Services
         {
             return this._shelterStateRepository.StoredStatUserOnShelter(id, dateStart, dateEnd);
         }
+        public IEnumerable<ShelterState> GetAll()
+        {
+            return this._shelterStateRepository.GetAll();
+        }
     }
 }
