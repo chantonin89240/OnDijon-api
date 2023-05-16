@@ -27,7 +27,7 @@ namespace DI2P5G2_Backend.Repository
 
         public ShelterState FindLastStateByShelter(int IdAbris)
         {
-            throw new NotImplementedException();
+            return this._context.ShelterState.Last();
         }
 
         public void AddShelterState(ShelterState shelterState)
@@ -38,8 +38,7 @@ namespace DI2P5G2_Backend.Repository
 
         public int StoredStatUserOnShelter(string id, DateTime dateStart, DateTime dateEnd)
         {
-            var stat = this._context.ShelterState.Where(shelter => shelter.IdAbris == id).Where(shelter => shelter.DateTimeRefresh >= dateStart).Where(shelter => shelter.DateTimeRefresh <= dateEnd).Count();
-            return stat;
+            return this._context.ShelterState.Where(shelter => shelter.IdAbris == id).Where(shelter => shelter.DateTimeRefresh >= dateStart).Where(shelter => shelter.DateTimeRefresh <= dateEnd).Count();
         }
     }
 }
