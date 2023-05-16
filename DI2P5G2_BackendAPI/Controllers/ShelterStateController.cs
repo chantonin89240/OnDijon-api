@@ -19,6 +19,14 @@ namespace DI2P5G2_BackendAPI.Controllers
             this._shelterStateService = shelterStateService;
         }
 
+        // GET: api/<ShelterStateController>
+        [HttpGet]
+        [Route("ShelterState")]
+        public IEnumerable<ShelterState> GetAll()
+        {
+            return _shelterStateService.GetAll();
+        }
+
         // GET api/<ShelterStateController>/5
         [HttpGet("{id}")]
         public ShelterState GetLastState(int id)

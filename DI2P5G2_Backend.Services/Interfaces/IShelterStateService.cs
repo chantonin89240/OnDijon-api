@@ -10,6 +10,7 @@ namespace DI2P5G2_Backend.Services.Interfaces
     public interface IShelterStateService
     {
         ShelterState GetLastStateByShelter(int IdAbris);
+        IEnumerable<ShelterState> GetAll();
         void AddShelterState(ShelterState shelterState);
         int GetStatUserOnShelter(string id, DateTime dateStart, DateTime dateEnd);
     }

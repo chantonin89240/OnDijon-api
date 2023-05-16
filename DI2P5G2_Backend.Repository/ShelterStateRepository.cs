@@ -20,6 +20,11 @@ namespace DI2P5G2_Backend.Repository
             this._context = context;
         }
 
+        public IEnumerable<ShelterState> GetAll()
+        {
+            return _context.ShelterState.ToList();
+        }
+
         public ShelterState FindLastStateByShelter(int IdAbris)
         {
             throw new NotImplementedException();
