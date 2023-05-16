@@ -21,7 +21,7 @@ namespace DI2P5G2_BackendAPI.Controllers
 
         // GET: api/<ShelterStateController>
         [HttpGet]
-        [Route("ShelterState")]
+        [Route("All")]
         public IEnumerable<ShelterState> GetAll()
         {
             return _shelterStateService.GetAll();
