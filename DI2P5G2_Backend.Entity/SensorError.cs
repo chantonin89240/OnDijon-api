@@ -13,7 +13,9 @@ namespace DI2P5G2_Backend.Entity
         public int? IdCapteur{ get; set; }
         public DateTime? DateTimeRefresh { get; set; }
         public string? Libelle{ get; set; }
+
         public SensorError() { }
+
         public SensorError(int id, string idAbris, int idCapteur, string libelle, DateTime? dateTimeRefresh)
         {
             Id = id;
