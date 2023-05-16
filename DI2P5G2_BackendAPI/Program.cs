@@ -23,8 +23,13 @@ builder.Services.AddDbContext<DI2P5G2_BackendDbContext>(
         );
 
 builder.Services.AddScoped<IProfilRepository, ProfilRepository>();
-builder.Services.AddScoped<IShelterStateRepository, ShelterStateRepository>();
+
+
 builder.Services.AddScoped<ISensorErrorRepository, SensorErrorRepository>();
+
+// AddScope des ShelterState
+builder.Services.AddScoped<IShelterStateRepository, ShelterStateRepository>();
+builder.Services.AddScoped<IShelterStateService, ShelterStateService>();
 
 // AddScope des Favoris
 builder.Services.AddScoped<IFavorisRepository, FavorisRepository>();

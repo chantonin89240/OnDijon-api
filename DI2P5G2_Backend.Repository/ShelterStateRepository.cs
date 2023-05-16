@@ -1,6 +1,7 @@
 ﻿using DI2P5G2_Backend.EntitiesContext;
 using DI2P5G2_Backend.Entity;
 using DI2P5G2_Backend.Repository.interfaces;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,35 +17,24 @@ namespace DI2P5G2_Backend.Repository
 
         public ShelterStateRepository(DI2P5G2_BackendDbContext context)
         {
-            _context = context;
+            this._context = context;
         }
 
-        public ShelterState GetById(int id)
+        public ShelterState FindLastStateByShelter(int IdAbris)
         {
-            return _context.ShelterState.FirstOrDefault(shelter => shelter.Id == id);
+            throw new NotImplementedException();
         }
 
-        public IEnumerable<ShelterState> GetAll()
+        public void AddShelterState(ShelterState shelterState)
         {
-            return _context.ShelterState.ToList();
+            this._context.ShelterState.Add(shelterState);
+            this._context.SaveChanges();
         }
 
-        public void Add(ShelterState shelter)
+        public int StoredStatUserOnShelter(string id, DateTime dateStart, DateTime dateEnd)
         {
-            _context.ShelterState.Add(shelter);
-            _context.SaveChanges();
-        }
-
-        public void Update(ShelterState shelter)
-        {
-            _context.Entry(shelter).State = EntityState.Modified;
-            _context.SaveChanges();
-        }
-
-        public void Delete(ShelterState shelter)
-        {
-            _context.ShelterState.Remove(shelter);
-            _context.SaveChanges();
+            var stat = this._context.ShelterState.Where(shelter => shelter.IdAbris == id).Where(shelter => shelter.DateTimeRefresh >= dateStart).Where(shelter => shelter.DateTimeRefresh <= dateEnd).Count();
+            return stat;
         }
     }
 }
