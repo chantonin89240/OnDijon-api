@@ -22,12 +22,12 @@ namespace DI2P5G2_Backend.Services
 
         public void AddShelterState(ShelterState shelterState)
         {
-            throw new NotImplementedException();
+            this._shelterStateRepository.AddShelterState(shelterState);
         }
 
         public ShelterState GetLastStateByShelter(int IdAbris)
         {
-            throw new NotImplementedException();
+            return this._shelterStateRepository.FindLastStateByShelter(IdAbris);
         }
 
         public int GetStatUserOnShelter(string id, DateTime dateStart, DateTime dateEnd)
