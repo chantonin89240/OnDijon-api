@@ -18,7 +18,7 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddDbContext<DI2P5G2_BackendDbContext>(
-              options => options.UseSqlServer(builder.Configuration.GetConnectionString("AzureDb"))
+              options => options.UseSqlServer(builder.Configuration.GetConnectionString("localDb"))
               //options => options.UseSqlServer(builder.Configuration.GetConnectionString("azureDb"))
         );
 
@@ -39,9 +39,9 @@ builder.Services.AddScoped<IFavorisService, FavorisService>();
 builder.Services.AddScoped<IAbriRepository, AbriRepository>();
 builder.Services.AddScoped<IAbriService, AbriService>();
 
-//var context = builder.Services.BuildServiceProvider().GetRequiredService<DI2P5G2_BackendDbContext>();
-//context.Database.EnsureDeleted();
-//context.Database.EnsureCreated();
+var context = builder.Services.BuildServiceProvider().GetRequiredService<DI2P5G2_BackendDbContext>();
+context.Database.EnsureDeleted();
+context.Database.EnsureCreated();
 
 
 
