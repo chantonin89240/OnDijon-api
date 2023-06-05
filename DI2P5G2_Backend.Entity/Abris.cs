@@ -11,7 +11,6 @@
         public decimal? GeoPointLat { get; set; }
         public decimal? GeoPointLon { get; set; }
         public int? NbPlaces { get; set; }
-        public int? NbPlacesInitial { get; set; }
         public string? CodComm { get; set; }
     }
 }

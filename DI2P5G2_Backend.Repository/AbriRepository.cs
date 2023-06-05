@@ -43,7 +43,6 @@ namespace DI2P5G2_Backend.Repository
                 newAbris.GeoPointLat = fields.GetProperty("geo_point_2d")[0].GetDecimal();
                 newAbris.GeoPointLon = fields.GetProperty("geo_point_2d")[1].GetDecimal();
                 newAbris.NbPlaces = fields.GetProperty("nb_places").GetInt16();
-                newAbris.NbPlacesInitial = fields.GetProperty("nb_places").GetInt16();
                 newAbris.CodComm = fields.GetProperty("codcomm").GetString();
                 
                 listAbris.Add(newAbris);
@@ -76,7 +75,6 @@ namespace DI2P5G2_Backend.Repository
             newAbris.GeoPointLat = fields.GetProperty("geo_point_2d")[0].GetDecimal();
             newAbris.GeoPointLon = fields.GetProperty("geo_point_2d")[1].GetDecimal();
             newAbris.NbPlaces = fields.GetProperty("nb_places").GetInt16();
-            newAbris.NbPlacesInitial = fields.GetProperty("nb_places").GetInt16();
             newAbris.CodComm = fields.GetProperty("codcomm").GetString();
 
             return newAbris;
