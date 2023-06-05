@@ -85,12 +85,6 @@ namespace DI2P5G2_Backend.EntitiesContext.Migrations
                 table: "Favoris",
                 column: "ProfilId");
 
-            migrationBuilder.CreateIndex(
-          name: "IX_Favoris_ProfilId",
-          table: "Favoris",
-          column: "ProfilId");
-
-
             var sp = @"CREATE PROCEDURE [dbo].[StatUserOnShelter]
                         @IdShelter varchar(50),
                         @StartDatetime datetime2,
@@ -102,6 +96,7 @@ namespace DI2P5G2_Backend.EntitiesContext.Migrations
                         and [ShelterState].[DateTimeRefresh] >= @StartDatetime
                         and [ShelterState].[DateTimeRefresh] <= @EndDatetime
                     END";
+
 
             migrationBuilder.Sql(sp);
         }

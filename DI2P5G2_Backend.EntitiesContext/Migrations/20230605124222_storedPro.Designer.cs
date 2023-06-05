@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DI2P5G2_Backend.EntitiesContext.Migrations
 {
     [DbContext(typeof(DI2P5G2_BackendDbContext))]
-    [Migration("20230523095600_storedPro")]
+    [Migration("20230605124222_storedPro")]
     partial class storedPro
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
