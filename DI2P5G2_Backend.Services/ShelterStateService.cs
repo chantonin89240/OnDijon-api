@@ -25,7 +25,7 @@ namespace DI2P5G2_Backend.Services
             this._shelterStateRepository.AddShelterState(shelterState);
         }
 
-        public ShelterState GetLastStateByShelter(int IdAbris)
+        public ShelterState GetLastStateByShelter(string IdAbris)
         {
             return this._shelterStateRepository.FindLastStateByShelter(IdAbris);
         }

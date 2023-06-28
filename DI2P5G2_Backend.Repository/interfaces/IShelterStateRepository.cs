@@ -9,7 +9,7 @@ namespace DI2P5G2_Backend.Repository.interfaces
 {
     public interface IShelterStateRepository
     {
-        ShelterState FindLastStateByShelter(int IdAbris);
+        ShelterState FindLastStateByShelter(string IdAbris);
         IEnumerable<ShelterState> GetAll();
         void AddShelterState(ShelterState shelterState);
         int StoredStatUserOnShelter(string id, DateTime dateStart, DateTime dateEnd);

@@ -25,9 +25,9 @@ namespace DI2P5G2_Backend.Repository
             return _context.ShelterState.ToList();
         }
 
-        public ShelterState FindLastStateByShelter(int IdAbris)
+        public ShelterState FindLastStateByShelter(string IdAbris)
         {
-            return this._context.ShelterState.Last();
+            return this._context.ShelterState.OrderBy(a => a.Id).Last(a => a.IdAbris == IdAbris);
         }
 
         public void AddShelterState(ShelterState shelterState)

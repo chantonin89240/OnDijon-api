@@ -38,6 +38,11 @@ builder.Services.AddScoped<IFavorisService, FavorisService>();
 // AddScope d'Abris
 builder.Services.AddScoped<IAbriRepository, AbriRepository>();
 builder.Services.AddScoped<IAbriService, AbriService>();
+
+// AddScope des ShelterStateIA
+builder.Services.AddScoped<IShelterStateIARepository, ShelterStateIARepository>();
+builder.Services.AddScoped<IShelterStateIAService, ShelterStateIAService>();
+
 //var context = builder.Services.BuildServiceProvider().GetRequiredService<DI2P5G2_BackendDbContext>();
 //context.Database.EnsureDeleted();
 //context.Database.EnsureCreated();

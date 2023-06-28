@@ -29,7 +29,7 @@ namespace DI2P5G2_BackendAPI.Controllers
 
         // GET api/<ShelterStateController>/5
         [HttpGet("{id}")]
-        public ShelterState GetLastState(int id)
+        public ShelterState GetLastState(string id)
         {
             return this._shelterStateService.GetLastStateByShelter(id);
         }

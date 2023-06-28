@@ -4,6 +4,7 @@ using DI2P5G2_Backend.EntitiesContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DI2P5G2_Backend.EntitiesContext.Migrations
 {
     [DbContext(typeof(DI2P5G2_BackendDbContext))]
-    partial class DI2P5G2_BackendDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230628084003_initIA")]
+    partial class initIA
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
